@@ -32,12 +32,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <div className="relative flex min-h-screen flex-col">
-	    <SiteHeader />
-	    <SiteBlob />
-            <div className="flex-1">{children}</div>
-	    <SiteFooter />
-          </div>
+	  <Providers>
+            <div className="relative flex min-h-screen flex-col">
+	      <SiteHeader />
+	      <SiteBlob />
+              <div className="flex-1">{children}</div>
+	      <SiteFooter />
+            </div>
+	  </Providers>
         </body>
       </html>
     </>
