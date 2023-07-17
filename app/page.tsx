@@ -17,12 +17,9 @@ interface Props {
 }
 
 export default async function Page({searchParams}: Props) {
-  const priceOrder = searchParams.price
-    ? `| order(price ${searchparams.price})`
-    : ""
-  const dateOrder =  searchParams.date
-    ? `| order(_createdAt ${searchparams.date})`
-    : ""
+  const { date = "desc", price } = searchParams
+  const priceOrder = price ? `| order(price ${price})` : ""
+  const dateOrder =  date ? `| order(_createdAt ${date})` : ""
   const order = `${priceOrder}${dateOrder}`
   
   const products = await client.fetch<SanityProduct[]>(
