@@ -18,7 +18,7 @@ export function ProductInfo({ product }: Props) {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0])
   const { addItem, incrementItem, cartDetails } = useShoppingCart()
   const { toast } = useToast()
-  const isInCart = !!cartDatails?.[product._id]
+  const isInCart = !!cartDetails?.[product._id]
 
   function addToCart() {
     const item = {
@@ -27,16 +27,16 @@ export function ProductInfo({ product }: Props) {
         size: selectedSize
       }
     }
-    isIncart ? incrementItem(item._id) : addItem(item)
+    isInCart ? incrementItem(item._id) : addItem(item)
     toast({
-      title: `${item.name} (${getSizeName(selectSize)})`
+      title: `${item.name} (${getSizeName(selectedSize)})`,
       description: "Product added to cart",
       action: (
         <Link href='/cart'>
 	  <Button variant="link" className="gap-x-2 whitespace-nowrap">
 	    <span>Open cart</span>
 	    <ArrowRight className="h-5 w-5" />
-	  </Buttton>
+	  </Button>
 	</Link>
       )
     })
@@ -73,7 +73,7 @@ export function ProductInfo({ product }: Props) {
         <div className="mt-4 flex">
           <Button
             type="button"
-	    onClick={add}
+	    onClick={addToCart}
             className="w-full bg-violet-600 py-6 text-base font-medium text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
           >
             Add to cart
