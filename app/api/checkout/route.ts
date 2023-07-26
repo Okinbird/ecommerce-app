@@ -22,7 +22,7 @@ export async function POST(request: Request) {
         shipping_rate: "shr_1NYFNJJVsP6a375JWyrffhes"
       }
     ],
-    billing_address_collection: ""auto",
+    billing_address_collection: "auto",
     success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/cart`
   })
