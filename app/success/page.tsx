@@ -12,7 +12,7 @@ interface Props {
 export default async function Page({ searchParams}: Props) {
   const sessionId = searchParams?.session_id ?? ""
   const checkoutSession = await stripe.checkout.sessions.retrieve(sessionId)
-  const cutomerDetails = checkoutSession?.customer_details
+  const customerDetails = checkoutSession?.customer_details
 
   return (
     <main className="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
