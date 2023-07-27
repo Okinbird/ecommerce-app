@@ -17,3 +17,24 @@
 *   How to manage product data within the application using Sanity with custom studio as well as how to describe data through schemas and query that data using groq query language.
 
 *   How to charge customers for their products with stripe using stripe checkout, add shipping cost, send invoices and retrieve information from customers purchases and finally when the app is ready will push the app to the web using versel.
+
+
+##  Technologies Used
+
+### Next 13
+
+### React
+
+*   It is a free and open-source front-end JavaScript library for building user interfaces based on components.
+
+### Stripe
+
+*   It offers payment-processing software ad application programming interfaces for e-commerce websites and mobile applications.
+
+### Sanity
+
+*   It is a content management system(CMS). It uses APIs to structure a company’s content, including photos, text, video and other media forms.
+
+### Tailwind CSS
+
+*   It is a CSS framework that provide a series of predefined classes for elements such as buttons or tables.
