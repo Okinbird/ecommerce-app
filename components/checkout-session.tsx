@@ -16,7 +16,7 @@ export function CheckoutSession({ customerDetails }: Props) {
     if (customerDetails) {
       clearCart()
     }
-  }, {customerDetails})
+  }, [customerDetails])
 
   if (!customerDetails) {
     return (
