@@ -17,7 +17,7 @@ export function Providers({ children }: Props) {
   cartMode="checkout-session"
   stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!}
   >
-    <ThemeProvider attribute="class" defaultTheme="system" ennableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <Toaster />
       {children}
       <TailwindIndicator />
